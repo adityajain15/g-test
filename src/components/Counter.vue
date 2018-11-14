@@ -1,7 +1,7 @@
 <template>
   <div v-if="boxes.length">
     <template v-for="value of boxes">
-      <span class="pa1 ma1 white bold dib" :style="`background: ${value % 2 ? 'black' : 'blue'}; border-top: ${value % 5 ? '' : '5px solid #ffcc00'}`" :key="value">{{value}}</span>
+      <span class="pa1 ma1 white bold dib" :style="`background: ${value % 2 ? 'blue' : 'black'}; border-top: ${value % 5 ? '' : '5px solid #ffcc00'}`" :key="value">{{value}}</span>
     </template>
     <span class="db ma3 f1">{{boxes.length}}</span>
   </div>
