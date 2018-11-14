@@ -5,7 +5,7 @@
     </template>
     <span class="db ma3 f1">{{boxes.length}}</span>
   </div>
-  <span v-else class="db helvetica">No boxes</span>
+  <span v-else class="db">No boxes</span>
 </template>
 
 <script>
