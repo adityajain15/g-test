@@ -3,7 +3,7 @@
     <template v-for="value of boxes">
       <span class="pa1 ma1 white bold dib" :style="`background: ${value % 2 ? 'blue' : 'black'}; border-top: ${value % 5 ? '' : '5px solid #ffcc00'}`" :key="value">{{value}}</span>
     </template>
-    <span class="db ma3 f1">{{boxes.length}}</span>
+    <span class="db ma3" :style="`font-size: ${boxes.length * 0.5 + 1}em`">{{boxes.length}}</span>
   </div>
   <span v-else class="db">No boxes</span>
 </template>
