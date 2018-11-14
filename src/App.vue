@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1 class="f1 bold helvetica">Box Builder</h1>
+    <h2 class="f3 bold helvetica ma2">Start Building</h2>
+    <button class="bg-green white pa2 pointer ma2 helvetica" @click="boxes.push(boxes.length + 1)">Add Box</button>
+    <button class="bg-red white pa2 pointer ma2 helvetica" @click="boxes.pop()">Remove Box</button>
+    <Counter :boxes="boxes" class="ma3"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Counter from './components/Counter.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Counter
+  },
+  data () {
+    return {
+      boxes: []
+    }
   }
 }
 </script>
